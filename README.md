@@ -21,18 +21,19 @@ Config.jobs = {
 -- AÑADE LOS TRABAJOS QUE DESEES
 ```
 
-##Uso
+## Uso
 
-Entra al juego de FiveM.
-Utiliza el comando /bolsa para abrir el menú de opciones de la bolsa en la cabeza.
-Selecciona la opción correspondiente para poner o quitar la bolsa de la cabeza del jugador cercano.
+1. **Entra al juego de FiveM.**
+2. **Utiliza el comando `/bolsa` para abrir el menú de opciones de la bolsa en la cabeza.**
+3. **Selecciona la opción correspondiente para poner o quitar la bolsa de la cabeza del jugador cercano.**
 
-##Advertencia
+## Advertencia
 
 Este script es público y se proporciona de forma gratuita. No está permitida su venta ni redistribución con fines comerciales. Úsalo según los términos y condiciones del desarrollador original.
 
-##Créditos
+## Créditos
 
-Desarrollador: Unanonimo
+- **Desarrollador:** UNANONIMO
+
 
 ¡Disfruta del script!
