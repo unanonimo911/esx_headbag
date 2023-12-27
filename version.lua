@@ -11,7 +11,6 @@ AddEventHandler('esx_headbag:checkVersion', function()
                 print('[^2' .. resourceName .. '^7] Versión correcta. ¡Listo para usar!')
             else
                 print('[^1' .. resourceName .. '^7] Versión incorrecta. La versión más reciente es: ' .. latestVersion)
-                print('Actualiza tu script desde: https://github.com/TU_USUARIO/TU_REPOSITORIO')
             end
         else
             print('[^1' .. resourceName .. '^7] No se pudo verificar la versión. Error de conexión.')
