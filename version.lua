@@ -5,6 +5,7 @@ AddEventHandler('esx_headbag:checkVersion', function()
 
     PerformHttpRequest('https://raw.githubusercontent.com/unanonimo911/versionchecker/main/versionheadbag.txt', function(errorCode, resultData, resultHeaders)
         if errorCode == 200 then
+                    Citizen.Wait(5000)
             local latestVersion = resultData:match("VERSION=(%d+.%d+.%d+)")
 
             if latestVersion and latestVersion == currentVersion then
