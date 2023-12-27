@@ -2,7 +2,7 @@
 
 ## Descripción
 
-`esx_headbag` es un script de FiveM que permite a los jugadores poner o quitar una bolsa de la cabeza de un jugador cercano utilizando el comando `/bolsa`. Este script incluye opciones para configurar los trabajos que pueden utilizar esta funcionalidad.
+`esx_headbag` es un script de FiveM que permite a los jugadores poner o quitar una bolsa de la cabeza de un jugador cercano utilizando el comando `/bolsa` (Necesitas tener el trabajo puesto en el `config.lua` ). Este script incluye opciones para configurar los trabajos que pueden utilizar esta funcionalidad.
 
 ## Configuración
 
