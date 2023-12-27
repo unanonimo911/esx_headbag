@@ -1,9 +1,6 @@
-AddEventHandler('onClientMapStart', function()
-    CheckVersion()
-end)
-
-function CheckVersion()
-    local currentVersion = '1.0.1' -- Versión actual de tu script
+RegisterServerEvent('esx_headbag:checkVersion')
+AddEventHandler('esx_headbag:checkVersion', function()
+    local currentVersion = '1.0.0' -- Versión actual de tu script
     local resourceName = GetCurrentResourceName()
 
     PerformHttpRequest('https://raw.githubusercontent.com/unanonimo911/versionchecker/main/versionheadbag.txt', function(errorCode, resultData, resultHeaders)
@@ -14,10 +11,18 @@ function CheckVersion()
                 print('[^2' .. resourceName .. '^7] Versión correcta. ¡Listo para usar!')
             else
                 print('[^1' .. resourceName .. '^7] Versión incorrecta. La versión más reciente es: ' .. latestVersion)
+                print('Actualiza tu script desde: https://github.com/TU_USUARIO/TU_REPOSITORIO')
             end
         else
             print('[^1' .. resourceName .. '^7] No se pudo verificar la versión. Error de conexión.')
         end
     end, 'GET', '', {['Content-Type'] = 'application/json'})
-end
+end)
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() == resourceName then
+        TriggerEvent('esx_headbag:checkVersion')
+    end
+end)
+
 
