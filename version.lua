@@ -20,6 +20,8 @@ end)
 
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() == resourceName then
+            local asds = 5000
+            Citizen.Await(asds)
         TriggerEvent('esx_headbag:checkVersion')
     end
 end)
