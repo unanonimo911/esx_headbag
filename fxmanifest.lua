@@ -11,7 +11,8 @@ client_scripts {
 }
 
 server_scripts {
-    'server.lua'
+    'server.lua',
+    'version.lua'
 }
 
 ui_page 'index.html' --HEAD BAG 
