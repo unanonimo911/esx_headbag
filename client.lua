@@ -17,7 +17,7 @@ end)
 function NajblizszyGracz() --This function send to server closestplayer
 
 local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
-local player = GetPlayerPed(-1)
+local player = PlayerPedId()
 
 if closestPlayer == -1 or closestDistance > 2.0 then 
     ESX.ShowNotification('~r~No hay ningún jugador cerca')
@@ -44,7 +44,7 @@ end)
 
 RegisterCommand('bolsa', function()
   local playerPed = PlayerId()
-  local playerPedId = GetPlayerPed(-1)
+  local playerPedId = PlayerPedId()
   local playerJob = ESX.PlayerData.job.name
   while ESX.GetPlayerData() == nil do Citizen.Wait(0) end
   while ESX.GetPlayerData().job == nil do Citizen.Wait(0) end
@@ -63,13 +63,13 @@ RegisterCommand('bolsa', function()
   end
 end, false)
 
-
+local moneyBag = joaat("prop_money_bag_01")
 
 RegisterNetEvent('headbag_job:nalozNa') --This event put head bag on nearest player
 AddEventHandler('headbag_job:nalozNa', function(gracz)
-    local playerPed = GetPlayerPed(-1)
-    Worek = CreateObject(GetHashKey("prop_money_bag_01"), 0, 0, 0, true, true, true) -- Create head bag object!
-    AttachEntityToEntity(Worek, GetPlayerPed(-1), GetPedBoneIndex(GetPlayerPed(-1), 12844), 0.2, 0.04, 0, 0, 270.0, 60.0, true, true, false, true, 1, true) -- Attach object to head
+    local playerPed = PlayerPedId()
+    Worek = CreateObject(moneyBag, 0, 0, 0, true, true, true) -- Create head bag object!
+    AttachEntityToEntity(Worek, playerPed, GetPedBoneIndex(playerPed, 12844), 0.2, 0.04, 0, 0, 270.0, 60.0, true, true, false, true, 1, true) -- Attach object to head
     SetNuiFocus(false,false)
     SendNUIMessage({type = 'openGeneral'})
     HaveBagOnHead = true
