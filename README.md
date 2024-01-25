@@ -31,9 +31,7 @@ Config.jobs = {
 
 Este script es público y se proporciona de forma gratuita. No está permitida su venta ni redistribución con fines comerciales. Úsalo según los términos y condiciones del desarrollador original.
 
-## Créditos
 
-- **Desarrollador:** UNANONIMO
 
 
 ¡Disfruta del script!
